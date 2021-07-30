@@ -29,3 +29,11 @@ Write the code for a single AWS Lambda function in (TypeScript, Java or Python) 
     ```
 ### Code Coverage Reports
 You can find code coverage reports at `target/site/jacoco/index.html`
+
+## Opportunities
+I ran out of time, but here are some thoughts I had about opportunities for improvement.
+* While unit testing coverage is good, I would have liked to have actually deployed the function and tested it in a real environment.
+* Without a Spring Container, I'm not confident my dependency injection is 100% correct. I feel the pattern is good, but without testing it, I can't be 100% certain. I could probably have used SpringBoot to get this, but I wasn't sure that was an appropriate choice for an AWS Lambda function. 
+* I should have added logging to the solution. I would have used SLF4J.
+* I did javadoc public methods and classes, but I did not incorporate building the javadocs in the pom.
+* I did not validate all arguments in the implementation, so things coming in as `Null` might cause some issues.
